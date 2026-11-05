@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0">
+
+    <persistence-unit name="CollegePU"
+                      transaction-type="JTA">
+
+        <jta-data-source>jdbc/CollegeMySQLResource</jta-data-source>
+
+        <class>com.in.astra.college.entity.Department</class>
+        <class>com.in.astra.college.entity.Branch</class>
+        <class>com.in.astra.college.entity.Student</class>
+        <class>com.in.astra.college.entity.Subject</class>
+        <class>com.in.astra.college.entity.Examination</class>
+        <class>com.in.astra.college.entity.Result</class>
+
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action"
+                      value="none"/>
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
